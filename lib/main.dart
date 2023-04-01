@@ -8,70 +8,64 @@ class Nutrition extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text('Nutrition Expert App'),
+        title: Text('Nutrition Expert '),
         centerTitle: true,
         backgroundColor: Colors.grey[800],
       ),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-              child: Container(
-color: Colors.amber,
-                  child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-      child: Row(
 
-        mainAxisAlignment: MainAxisAlignment.center,
-        // mainAxisSize: MAinAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.center,
 
-        children: <Widget>[
+        body: Column(
 
-          Container(
-            // padding: EdgeInsets.symmetric(vertical: 40, horizontal: 40),
-            child: Align(
-              // alignment: Alignment.bottomRight,
-              child: ElevatedButton.icon(
-                onPressed: (){
-                  print('Break fast added');
-                },
-                icon: Icon(
-                  Icons.add_box_outlined,
+          children: [
+            Container(
+              height: 170,
+              width: 370,
+              // padding: EdgeInsets.symmetric(vertical: 30,horizontal: 70),
+              color: Colors.amber,
+                  child:Align(
+                    alignment: Alignment(-.6, .7),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                       children: [
+                         Text('Eaten'),
+                         Text('Remaining'),
+                         Text('Losed')
+                       ],
+                      ),
+                     ),
+                         ),
+
+            Row(
+
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Break Fast'),
                 ),
-                label: Text('Break fast'),
-              )
-          ),
-          ),
-
-          Container(
-            // color: Colors.lightBlue,
-              height: 100,
-              // height: MediaQuery.of(context).size.height * 0.5,
-            width: 150,
-            // padding: EdgeInsets.symmetric(vertical: 0,horizontal: 0),
-            child: Align(
-              alignment: Alignment.center,
-              child: ElevatedButton.icon(
-                onPressed: (){
-                  print('lunch added');
-                },
-                icon: Icon(
-                  Icons.add_box_outlined,
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Lunch      ', textAlign: TextAlign.center,),
                 ),
-                label: Text('Lunch'),
-              )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(' Dinner      ',
+                    textAlign: TextAlign.center,),
+                              ),
 
 
-          )
-          )
-        ],
-      ),
-
-      )
-              )
-          )
-    ],
-
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(' Snack     ', textAlign: TextAlign.center,),
+                ),
+              ],
+            ),
+          ],
 
        )
 
