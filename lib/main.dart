@@ -16,19 +16,21 @@ class Nutrition extends StatelessWidget {
         children: <Widget>[
           Expanded(
               child: Container(
-
+color: Colors.amber,
                   child: Padding(
                       padding: const EdgeInsets.all(8.0),
       child: Row(
 
-        // mainAxisAlignment: _mainAxisAlignment,
+        mainAxisAlignment: MainAxisAlignment.center,
         // mainAxisSize: MAinAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        crossAxisAlignment: CrossAxisAlignment.center,
 
         children: <Widget>[
+
           Container(
+            // padding: EdgeInsets.symmetric(vertical: 40, horizontal: 40),
             child: Align(
-              alignment: Alignment(-.90,-.9),
+              // alignment: Alignment.bottomRight,
               child: ElevatedButton.icon(
                 onPressed: (){
                   print('Break fast added');
@@ -42,19 +44,26 @@ class Nutrition extends StatelessWidget {
           ),
 
           Container(
+            // color: Colors.lightBlue,
+              height: 100,
+              // height: MediaQuery.of(context).size.height * 0.5,
+            width: 150,
+            // padding: EdgeInsets.symmetric(vertical: 0,horizontal: 0),
+            child: Align(
+              alignment: Alignment.center,
               child: ElevatedButton.icon(
                 onPressed: (){
-                  print('Break fast added');
+                  print('lunch added');
                 },
                 icon: Icon(
                   Icons.add_box_outlined,
                 ),
-                label: Text('Break fast'),
+                label: Text('Lunch'),
               )
 
 
           )
-          // )
+          )
         ],
       ),
 
