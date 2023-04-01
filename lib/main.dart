@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 void main()=>runApp(MaterialApp(
+  debugShowCheckedModeBanner: false,
   home: Nutrition(),
   ));
 class Nutrition extends StatelessWidget {
@@ -14,14 +15,25 @@ class Nutrition extends StatelessWidget {
       ),
 
 
-        body: Column(
+        body: Column(  //main column of the whole home interface
 
-          children: [
+          children: [// this is the main children for the whole interface
+            Text('Summary',
+            style: TextStyle(
+              height: 4,
+              color: Colors.white,
+              fontSize: 15,
+              fontWeight: FontWeight.bold
+            ),
+            ),
+
+            //summarty container will start from this
             Container(
               height: 170,
               width: 370,
               // padding: EdgeInsets.symmetric(vertical: 30,horizontal: 70),
               color: Colors.amber,
+
                   child:Align(
                     alignment: Alignment(-.6, .7),
                     child: Row(
@@ -35,37 +47,60 @@ class Nutrition extends StatelessWidget {
                      ),
                          ),
 
-            Row(
+//summary container will End in this
+
+                                  Text('Activites',textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    height: 4,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+
+
+                                  ),
+
+                                  ),
+
+               //Activites of the ***first Row*** will start from this
+               Row(
 
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
+
+                ElevatedButton.icon(
                   onPressed: () {},
-                  child: Text('Break Fast'),
+                  icon: Icon(Icons.add_box_outlined),
+                  label: Text('Break Fast '),
                 ),
-                ElevatedButton(
+                ElevatedButton.icon(
                   onPressed: () {},
-                  child: Text('Lunch      ', textAlign: TextAlign.center,),
+                  icon:Icon(Icons.add_box_outlined),
+                  label: Text('Lunch      ', textAlign: TextAlign.center,),
                 ),
               ],
             ),
+            //Second Row or Activities
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
+                ElevatedButton.icon(
                   onPressed: () {},
-                  child: Text(' Dinner      ',
+                  icon:Icon(Icons.add_box_outlined),
+                  label: Text(' Dinner      ',
                     textAlign: TextAlign.center,),
                               ),
 
 
-                ElevatedButton(
+                ElevatedButton.icon(
                   onPressed: () {},
-                  child: Text(' Snack     ', textAlign: TextAlign.center,),
+                  icon: Icon(Icons.add_box_outlined),
+                  label:Text(' Snack     ', textAlign: TextAlign.center,),
                 ),
               ],
             ),
-          ],
+//second Row will End in this
+
+          ],  //the chilren
 
        )
 
